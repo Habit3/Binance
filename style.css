@@ -1,5 +1,6 @@
 body {
     background-image: url('sfondo_desktop.png');
+    background-position: center;  /* Centra l'immagine */
     color: #fff;
     font-family: Arial, sans-serif;
     display: flex;
