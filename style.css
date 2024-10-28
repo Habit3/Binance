@@ -22,22 +22,23 @@ body {
     cursor: pointer;
     font-size: 18px;
     border-radius: 5px;
-    margin-bottom: 80px;
+    margin-bottom: 50px; /* Modificato per ridurre lo spazio sotto il pulsante */
 }
 
-/* Opzioni contenitore */
 .options {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Aggiunto per permettere l'adeguamento su schermi più piccoli */
+    flex-direction: column; /* Le opzioni verranno visualizzate in colonna */
+    align-items: center; /* Allinea le opzioni al centro */
+    margin-top: 50px; /* Aumenta questo valore per abbassare ulteriormente le opzioni */
 }
 
 .option {
     background-color: #333;
     border: 1px solid #444;
     border-radius: 10px;
-    width: 150px;
-    margin: 0 10px;
+    width: 80%; /* Riduce la larghezza per adattarsi meglio su schermi più piccoli */
+    max-width: 300px; /* Imposta una larghezza massima */
+    margin: 20px 0; /* Aumenta il margine verticale per separarli di più */
     padding: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
