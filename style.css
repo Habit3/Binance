@@ -84,3 +84,37 @@ h2 {
 p {
     margin: 0;
 }
+/* Stili generali per schermi più piccoli */
+@media (max-width: 768px) {
+    /* Centra il pulsante e adattalo a schermi piccoli */
+    #connectButton {
+        position: static;
+        margin: 20px auto; /* Centra il pulsante su mobile */
+        width: 80%; /* Aumenta la larghezza per maggiore visibilità */
+    }
+
+    /* Adatta il contenitore delle opzioni */
+    .options {
+        flex-direction: column; /* Dispone i rettangoli in colonna su mobile */
+        gap: 20px; /* Riduce la spaziatura tra i rettangoli */
+        align-items: center;
+    }
+
+    /* Adatta i singoli rettangoli */
+    .option {
+        width: 90%; /* Allarga i rettangoli su schermi piccoli */
+        padding: 30px; /* Riduce leggermente il padding per adattarlo */
+    }
+
+    /* Sposta il contenitore balance */
+    #balanceImage {
+        margin-top: 20px;
+        width: 90%; /* Riduce la larghezza per schermi mobili */
+    }
+
+    /* Background adattato per schermi piccoli */
+    body {
+        background-size: cover; /* Ridimensiona l'immagine di sfondo */
+        background-position: center top; /* Centra l'immagine su mobile */
+    }
+}
