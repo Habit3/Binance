@@ -24,9 +24,11 @@ body {
     margin-bottom: 30px;
 }
 
+/* Opzioni contenitore */
 .options {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Aggiunto per permettere l'adeguamento su schermi più piccoli */
 }
 
 .option {
@@ -50,4 +52,22 @@ h2 {
 
 p {
     margin: 5px 0 0;
+}
+
+/* Media Queries per il design mobile */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column; /* Imposta la direzione della flex per i dispositivi mobili */
+        height: auto; /* Permette al body di adattarsi al contenuto */
+    }
+
+    .options {
+        flex-direction: column; /* Le opzioni verranno visualizzate in colonna */
+        align-items: center; /* Allinea le opzioni al centro */
+    }
+
+    .option {
+        width: 90%; /* Le opzioni occupano il 90% della larghezza disponibile */
+        margin: 10px 0; /* Margine verticale per la spaziatura */
+    }
 }
