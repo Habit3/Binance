@@ -1,58 +1,86 @@
-body {
-    <header>
-    <img src="barrabinance.png" alt="Intestazione" class="header-image">
-    </header>
-    width: 100%; /* Rende l'immagine larga quanto la finestra del browser */
-    height: auto; /* Mantiene le proporzioni dell'immagine */
-    display: block; /* Rende l'immagine un blocco per evitare spazi bianchi */
-    margin-top: -10px; /* Sposta l'immagine verso l'alto */
+/* Stile per l'intestazione */
+.header {
+    width: 100%; /* Larghezza al 100% */
+    background-color: rgba(0, 123, 255, 0.8); /* Colore di sfondo con trasparenza */
+    padding: 20px 0; /* Maggiore spaziatura verticale per aumentare l'altezza */
+    text-align: center; /* Centra il testo */
+    position: absolute; /* Sovrappone al contenuto sottostante */
+    top: 0; /* Posiziona l'intestazione in cima alla pagina */
+    z-index: 1000; /* Assicura che l'intestazione sia sopra gli altri elementi */
 }
-    background-image: url('sfondo_desktop.png');
+
+/* Stile generale della pagina */
+body {
+    background-image: url('sfondo_desktop.png'); /* Assicurati che il percorso sia corretto */
+    background-color: #000000ec;
+    background-size: 133% auto;
+    background-position: 0% 20%;
+    background-repeat: no-repeat; /* Non ripete l'immagine */
+    color: #fff;
     font-family: Arial, sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Permette di allineare gli elementi in colonna */
-    height: 100vh;
+    height: 85vh;
     margin: 0;
 }
 
+/* Stile per il contenitore principale */
 .container {
     text-align: center;
+    margin-top: 155px; /* Maggiore margine per evitare sovrapposizioni */
 }
 
+/* Stile del pulsante Connect Wallet */
 #connectButton {
-    background-color: #007bff;
-    color: white;
+    background-color: #4ebe59;
+    color: rgb(0, 0, 0);
     border: none;
-    padding: 15px 30px; /* Aumenta le dimensioni del pulsante */
+    padding: 10px 22px;
     cursor: pointer;
-    font-size: 18px;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    font-size: 14px;
+    border-radius: 9px;
+    position: absolute;
+    top: 90px;
+    right: 200px;
 }
 
+/* Stile per le opzioni */
 .options {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Permette ai rettangoli di adattarsi se lo schermo è piccolo */
+    gap: 70px; /* Spaziatura tra i rettangoli */
+    margin-top: 50px; /* Sposta il contenitore delle opzioni più in basso */
 }
 
+/* Stile per ogni singola opzione */
 .option {
     background-color: #333;
-    border: 1px solid #444;
-    border-radius: 10px;
-    width: 150px;
-    margin: 10px; /* Margine uniformato */
-    padding: 20px;
+    border: 16px solid #444;
+    border-radius: 20px;
+    width: 100px;
+    padding: 42px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.5s; /* Anima il cambio di colore al passaggio del mouse */
+}
+
+/* Stile per l'immagine balance */
+#balanceImage {
+    margin-top: 40px; /* Aggiusta il valore per spostare l'immagine in basso */
+    display: block; /* Assicura che l'immagine si comporti come un elemento a blocco */
+    margin-left: auto; /* Centra l'immagine orizzontalmente */
+    margin-right: auto;
 }
 
 .option:hover {
-    background-color: #555;
+    background-color: #c6b51bca;
 }
 
-.balance {
-    margin-top: 30px; /* Aggiunge spazio sopra il saldo */
+h2 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
 }
