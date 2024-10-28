@@ -84,71 +84,77 @@ h2 {
 p {
     margin: 0;
 }
-/* Stili generali per schermi più piccoli */
+/* Stili per la versione desktop (schermi più larghi di 768px) */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 11px; /* Spazio per l'intestazione */
+}
+
+.header {
+    width: 200%;
+    background-color: rgba(0, 123, 255, 0.9);
+    padding: 200px 0;
+    text-align: center;
+    position: fixed;
+    top: 200;
+    z-index: 10;
+}
+
+/* Posizionamento e dimensione del pulsante per il desktop */
+#connectButton {
+    position: absolute;
+    top: 100px;
+    right:190px;
+    padding: 10px 22px;
+    font-size: 14px;
+    border-radius: 9px;
+}
+
+/* Contenitori centrati per desktop */
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+/* Versione per dispositivi mobili */
 @media (max-width: 768px) {
-    /* Centra il pulsante e adattalo a schermi piccoli */
-    #connectButton {
-        position: static;
-        margin: 20px auto; /* Centra il pulsante su mobile */
-        width: 80%; /* Aumenta la larghezza per maggiore visibilità */
+    /* Stili per il corpo della pagina mobile */
+    body {
+        padding-top: 160px; /* Margine per l’intestazione */
     }
 
-    /* Adatta il contenitore delle opzioni */
+    /* Intestazione mobile */
+    .header {
+        font-size: 10px;
+        margin-right: 100%;
+   }
+
+    /* Pulsante per il mobile */
+    #connectButton {
+        position: static; /* Lascia il pulsante in linea col resto del contenuto */
+        margin-top: -30%;
+margin-left: 30%;       
+display:flex
+        
+    
+    }
+
+    /* Contenitori centrati per mobile */
     .options {
-        flex-direction: column; /* Dispone i rettangoli in colonna su mobile */
-        gap: 20px; /* Riduce la spaziatura tra i rettangoli */
+        flex-direction: column; /* Mostra i contenitori in verticale */
+        gap: 20px; /* Minore spaziatura per i dispositivi mobili */
         align-items: center;
     }
 
-    /* Adatta i singoli rettangoli */
+    /* Contenitori mobile */
     .option {
-        width: 90%; /* Allarga i rettangoli su schermi piccoli */
-        padding: 30px; /* Riduce leggermente il padding per adattarlo */
-    }
-
-    /* Sposta il contenitore balance */
-    #balanceImage {
-        margin-top: 20px;
-        width: 90%; /* Riduce la larghezza per schermi mobili */
-    }
-
-    /* Background adattato per schermi piccoli */
-    body {
-        background-size: cover; /* Ridimensiona l'immagine di sfondo */
-        background-position: center top; /* Centra l'immagine su mobile */
-    }
-}
-@media (max-width: 768px) {
-    .header {
-        width: 100%;
-        padding: 10px 0;
-        font-size: 18px; /* Riduci la dimensione del testo per schermi piccoli */
-        position: fixed; /* Mantiene l'intestazione sempre visibile */
-        top: 0;
-        z-index: 1000;
-    }
-
-    /* Centra il pulsante e gli elementi della pagina */
-    #connectButton {
-        top: 70px; /* Aggiusta la posizione in base alla visualizzazione mobile */
-        right: 10px;
-        font-size: 12px; /* Riduci leggermente il testo per migliorare la visualizzazione */
-    }
-
-    .options {
-        flex-direction: column; /* I rettangoli si dispongono in colonna per evitare sovrapposizioni */
-        gap: 20px; /* Spazio tra i rettangoli per evitare che siano troppo vicini */
-    }
-
-    .option {
-        width: 90%; /* Rendi i rettangoli più stretti, occupando meno spazio sullo schermo */
-        margin: 0 auto; /* Centra i rettangoli per una visualizzazione migliore */
-    }
-
-    /* Bilancio "Your Balance" */
-    #balanceContainer {
-        margin-top: 20px; /* Aggiusta il margine superiore per posizionare il bilancio sotto le opzioni */
-        width: 100%; /* Allinea il bilancio con la larghezza del contenitore su schermi piccoli */
-        font-size: 16px;
+        width: 38%; /* Occupa tutta la larghezza */
+        max-width: 120px;
     }
 }
