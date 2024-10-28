@@ -1,4 +1,9 @@
 body {
+    .header-image {
+    width: 100%; /* Rende l'immagine larga quanto la finestra del browser */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+    display: block; /* Rende l'immagine un blocco per evitare spazi bianchi */
+}
     background-image: url('sfondo_desktop.png');
     color: #fff;
     font-family: Arial, sans-serif;
