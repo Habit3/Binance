@@ -3,7 +3,7 @@ body {
     width: 100%; /* Rende l'immagine larga quanto la finestra del browser */
     height: auto; /* Mantiene le proporzioni dell'immagine */
     display: block; /* Rende l'immagine un blocco per evitare spazi bianchi */
-    margin-top: -2px; /* Sposta l'immagine verso l'alto */
+    margin-top: -0px; /* Sposta l'immagine verso l'alto */
 }
     background-image: url('sfondo_desktop.png');
     color: #fff;
@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column; /* Permette di allineare gli elementi in colonna */
-    height: 180vh;
+    height: 10vh;
     margin: 0;
 }
 
