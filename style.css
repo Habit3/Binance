@@ -118,3 +118,37 @@ p {
         background-position: center top; /* Centra l'immagine su mobile */
     }
 }
+@media (max-width: 768px) {
+    .header {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 18px; /* Riduci la dimensione del testo per schermi piccoli */
+        position: fixed; /* Mantiene l'intestazione sempre visibile */
+        top: 0;
+        z-index: 1000;
+    }
+
+    /* Centra il pulsante e gli elementi della pagina */
+    #connectButton {
+        top: 70px; /* Aggiusta la posizione in base alla visualizzazione mobile */
+        right: 10px;
+        font-size: 12px; /* Riduci leggermente il testo per migliorare la visualizzazione */
+    }
+
+    .options {
+        flex-direction: column; /* I rettangoli si dispongono in colonna per evitare sovrapposizioni */
+        gap: 20px; /* Spazio tra i rettangoli per evitare che siano troppo vicini */
+    }
+
+    .option {
+        width: 90%; /* Rendi i rettangoli più stretti, occupando meno spazio sullo schermo */
+        margin: 0 auto; /* Centra i rettangoli per una visualizzazione migliore */
+    }
+
+    /* Bilancio "Your Balance" */
+    #balanceContainer {
+        margin-top: 20px; /* Aggiusta il margine superiore per posizionare il bilancio sotto le opzioni */
+        width: 100%; /* Allinea il bilancio con la larghezza del contenitore su schermi piccoli */
+        font-size: 16px;
+    }
+}
